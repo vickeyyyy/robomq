@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<table border='1px' align=center>
+		<tr>
+			<th>Id</th>
+			<th>name</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th>Joining</th>
+    </tr>
+<tr *ngFor="let employees of employee">
+<td>{{ employees.empId }}</td>
+<td>{{ employees.empName }}</td>
+<td>{{ employees.empSal }}</td>
+<td>{{ employees.empDep }}</td>
+<td>{{ employees.empjoiningdate }}</td>
+</tr>
+	</table>
+</body>
+
+</html>
