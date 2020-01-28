@@ -1,0 +1,26 @@
+
+<div *ngIf="getEmps.length > 0"></div>
+<style>
+  table, th, td {
+    border: 1px solid black;
+  }
+</style>
+
+<table>
+  <!--<ng-container matRowDef="position"> -->
+  <th> ID </th>
+  <th> NAME </th>
+  <th> SALARY </th>
+  <th> DEPARTMENT </th>
+  <th> ACTIONS </th>
+  <tr *ngFor="let t of getEmps">
+    <td> {{t.enteredId}} </td>
+    <td> {{t.enteredName}} </td>
+    <td> {{t.enteredSalary}} </td>
+    <td> {{t.enteredDepartment}} </td>
+    <td><button> UPDATE </button></td>
+    <td><button> DELETE </button></td>
+  </tr>
+</table>
+<br/><br/>
+<p *ngIf="getEmps.length <= 0"> No details to show currently </p>
